@@ -1,9 +1,9 @@
-
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
-mongoose.connect('mongodb+srv://admin-harshit:Test123@cluster0.u8j5o.mongodb.net/todolistDB?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.MONGODB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const app = express();
 
